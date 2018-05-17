@@ -47,7 +47,11 @@ foo.team=whatevs
 </pre>
 
 2) Loading the properties file
+```xml
 <context:property-placeholder Location="classpath:sports.properties" />
+```
 
 3) Referencing the values
+```xml
 <property name="team" value="${foo.team}" />
+```
