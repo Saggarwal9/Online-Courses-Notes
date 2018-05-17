@@ -32,6 +32,14 @@ a) Configure your spring breans
 b) Create a spring container  
 c) Retrieve beans from spring container  
 
+#### What are Java Beans?
+In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC  
+container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed  
+by a Spring IoC container. Otherwise, a bean is simply one of many objects in your application. Beans,   
+and the dependencies among them, are reflected in the configuration metadata used by a container.  
+
+**Essentially** Beans are just java objects.
+
 #### Configuring Spring Container
 
 ```xml
@@ -55,3 +63,19 @@ Based on the configuration in the xml file, it will give us the type of object w
 <pre>
 Coach theCoach = context.getBean("myCoach",Coach.class); //myCoach is the id ,Coach.class is the interface
 </pre>
+
+#### Extra
+Headers to start the configuration file.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+</beans>
+
+
+```
