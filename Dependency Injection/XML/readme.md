@@ -39,3 +39,28 @@ We replace the constructor-arg line with:
 ```
 This calls the **setFortuneService** by capitalizing the first letter of the property name  
 and prepending set to the name provided. 
+
+To read literals
+
+<property name= "fortuneService" value="You gon' die" />
+
+To read from a property file
+
+<pre>
+1) Create Properties file.  
+2) Load properties file in the Spring config file.  
+3) Reference Values from the properties files.  
+</pre>
+
+1) Creating the properties file  
+Open text file, and write:
+<pre>
+foo.email=abc@def.com
+foo.team=whatevs
+</pre>
+
+2) Loading the properties file
+<context:property-placeholder Location="classpath:sports.properties" />
+
+3) Referencing the values
+<property name="team" value="${foo.team}" />
