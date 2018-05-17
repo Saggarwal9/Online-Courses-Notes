@@ -24,7 +24,18 @@ Now we add to our applicationContext.xml:-
   
   <bean id="myCach"
     class="ioc.BaseballCoach">
-      <constructor-arg ref="myFortuneService" > //ADDON
+      <!-- CONSTRUCTOR INJECTION -->
+      <constructor-arg ref="myFortuneService" /> <!-- The /> IS SUPER IMPORTANT XML 101 GEEZ -->
 </bean>
 ```
 
+So we inject the fortune service dependency/helper using "Constructor Injection".  
+
+2) Setter Injection
+Now we have a class without the constructor with the fortune service arg.  
+We replace the constructor-arg line with: 
+```xml
+<property name = "fortuneService" ref="myFortuneService" />
+```
+This calls the **setFortuneService** by capitalizing the first letter of the property name  
+and prepending set to the name provided. 
