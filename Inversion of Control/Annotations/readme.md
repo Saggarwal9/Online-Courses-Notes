@@ -16,3 +16,7 @@ Step 3: Retrieving Beans from the annotation
 <pre>
 Coach theCoach = context.getBean("FootballCoach",Coach.class);
 </pre>
+
+We don't necessarily have to define a bean id through annotation,   
+if the class name is TennisCoach, then the default annoation will be
+**tennisCoach**. (first letter lowercase)
