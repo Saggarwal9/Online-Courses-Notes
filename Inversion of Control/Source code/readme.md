@@ -67,4 +67,5 @@ public Coach swimCoach(FortuneService service){ //swimCoach is the bean name, do
 }
 </pre>
 
-Every other step is the same as above (Step 1 and 2 first section).  
+We avoid component scannning in this approach by manually defining our beans and their dependencies.  
+Every other step is the same as above (Step 3 and 4 first section).  
