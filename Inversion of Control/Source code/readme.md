@@ -69,3 +69,23 @@ public Coach swimCoach(FortuneService service){ //swimCoach is the bean name, do
 
 We avoid component scannning in this approach by manually defining our beans and their dependencies.  
 Every other step is the same as above (Step 3 and 4 first section).  
+
+### Injection using property file. 
+step 1: Create properties file.  
+Step 2: load properties file.  
+Step 3: Reference these values in our program.  
+
+Step 2:
+<pre>
+@PropertySource("Classpath:sport.properties") //sport.properties is the name of the file. 
+</pre>
+
+Step 3: 
+<pre>
+@Value("${foo.email}")
+private String email;
+
+@Value("${foo.address}")
+private String address;
+</pre>
+</pre>
