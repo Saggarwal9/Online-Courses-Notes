@@ -156,10 +156,14 @@ The arguments are in a specific order:
     name: "Cindy",
     age: 32,
     city: "Missoula"
+    add: function(x,y){
+      return x+y;
+    }
   };
   console.log(person.name); //Cannot use dot notation if property starts with a number/has space
   //or
   console.log(person["name"];
+  person.add(10,5)
   
   Another differnce:
   var str="name";
@@ -181,3 +185,4 @@ var posts= [
   }
 ]
 </pre>
+
