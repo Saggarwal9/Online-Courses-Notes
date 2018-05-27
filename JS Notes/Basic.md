@@ -43,7 +43,7 @@ var isFunny = "false"//**truthy**
 </pre>
 
 
-### Methods
+## Methods
 <pre>
 function doSomething(num){
   console.log("Hello World");
@@ -79,3 +79,69 @@ SetInterval returns a number, which can be used to stop the itnervals using clea
 clearInterval(2);
 </pre>
 
+### Anonymous Functions
+<pre>
+setInterval(function(){
+  console.log("Twinke twinke...");
+},2000);
+</pre>
+
+## Data Structures
+### Arrays
+Empty spaces are filled by undefined. Arrays can take in any type of data (Doesn't have to be of one type).  
+<pre>
+var friends= ["Charlie", "Liz", "David", "Mattias"];
+friends.length //4
+//OR
+var friends = new Array(); //uncommon
+//OR
+var friends = [];
+</pre>
+
+#### Arrays in-built methods
+**Push and Pop**  
+<pre>
+var colors=["red","orange","yellow"];
+colors.push("green"); //Adds at end
+var lastColor=colors.pop(); //Returns and removes the last element
+</pre>
+
+**Shift and Unshift**  
+Opposite to push and pop, adds/remove in the front.
+<pre>
+colors.unshift("infrared"); //adds infrared in front
+colors.shift(); //removes infrared.
+</pre>
+
+**indexOf()**
+returns the index of the data if found in the array.  
+colors.indexOf("orange"); //returns 1  
+
+**slice()**  
+use slice() to copy entire/parts of an array.
+<pre>
+var nums = [1,2,3,4,5,6,7];
+var slicednums=nums.slice(1,4);//returns slicednums=[2,3,4]
+var slicednums=nums.slice(); //returns a copy of the original array.
+</pre>
+
+### ForEach
+JavaScript provides an easy built-in way of iterating voer an array: ForEach.
+<pre>
+var colors= ["red","orange","yellow","green"];
+colors.forEach(function(eachColor){ //eachColor is a placeholder name to refer to all the objects inside the array.
+console.log("My favorite color is " + eachColor);
+}); //Will print My favorite color is red. My favorite color is orange......
+
+We can even give pass a function.
+colors.forEach(<function name>) like colors.forEach(printColor);
+</pre>
+
+More documentation:  
+<pre>
+.forEach takes a callback function, that callback function is expected to have at least 1, but up to 3, arguments. This is how .forEach was designed.
+The arguments are in a specific order:
+- The first one represents each element in the array (per loop iteration) that .forEach was called on.
+- The second represents the index of said element.
+- The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
+</pre>
