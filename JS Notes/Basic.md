@@ -43,7 +43,7 @@ var isFunny = "false"//**truthy**
 </pre>
 
 
-##3 Methods
+### Methods
 <pre>
 function doSomething(num){
   console.log("Hello World");
@@ -61,5 +61,21 @@ var capitalize=function(str){
 }
 capitalize()
 capitalize = 134; //now we lose the code of the function.
+</pre>
+
+### Higher Order Functions
+We can pass a function as an argument.  
+<pre>
+function sing(){
+  console.log("Twinke Twinkle Little Stars");
+  console.log("How I wonder what you are");
+}
+
+//setInterval(anotherFunc, interval in ms) - If you want to call the function every interval
+setInterval(sing,1000); //Passing sing function --> Higher order function
+</pre>
+SetInterval returns a number, which can be used to stop the itnervals using clearInterval(<setInterval return num>)  
+<pre>
+clearInterval(2);
 </pre>
 
