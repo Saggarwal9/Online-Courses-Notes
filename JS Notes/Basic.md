@@ -2,7 +2,10 @@ Variables are of dynamic type. We don't need to specific their type and can chan
 Variables are initially undefined, and unless we **explicitly** mention it as null, to indicate it's empty.  
 
 Some in-built methods: console.log() ,alert(), prompt(), clear().  
-Number() is another method, it is like Integer.parseInt()
+Number() is another method, it is like Integer.parseInt().
+<string>.indexOf("yes") // is like substring. Returns -1 if they don't find the substring.
+  <string>.slice(1) //Another function like substring, <string>.substring(1);
+
 
 javascript files ends with .js
 <pre>
@@ -24,6 +27,8 @@ we can connect this to our HTML element by including
 Same as java, there is an additional === operator that compares the type and value. Corallaly, there is !==.  
 x== "5" (Performs type coercion i.e. converting the value into a type that can be compared with x) is true but x === "5" false.  
 
+We can compare Strings with x=="yes".  
+
 ### Turthy and Falsy Values
 Values that aren't acxtually true or false, are still inherently "truthy" or "falsey" when evaluated in a boolean context.  
 "hello" in console will return "hello", !"hello" will return false(falsey), !!"hello" will return true (truthy).  
@@ -35,5 +40,26 @@ var str="" //falsey
 var msg= "haha!" //truthy
 var isFunny = "false"//**truthy**
 !((str||msg) && isFunny) is falsey
+</pre>
+
+
+##3 Methods
+<pre>
+function doSomething(num){
+  console.log("Hello World");
+  return num;
+}
+doSomething //Pritns the function definition and **not executes** it.
+doSomething();
+var value=doSomething(); //contains 139
+</pre>
+
+There are two types of syntax for methods. FUnction Declaration vs Function Expression.
+<pre>
+var capitalize=function(str){
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+capitalize()
+capitalize = 134; //now we lose the code of the function.
 </pre>
 
