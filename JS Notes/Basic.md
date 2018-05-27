@@ -166,3 +166,18 @@ The arguments are in a specific order:
   someObject.str //doesn't look for name
   someObject\[str\] //does evaluate str and looks for "name"
 </pre>
+**Note:** the object definiton has "," after every member.  
+
+### Arrays of Object
+<pre>
+var posts= [
+  {
+    title: "Cats are mediocre",
+    author: "Colt"
+  },
+  {
+  title: "Cats are awesome",
+  author: "Not colt"
+  }
+]
+</pre>
