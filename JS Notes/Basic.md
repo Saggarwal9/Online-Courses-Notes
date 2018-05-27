@@ -125,6 +125,9 @@ var slicednums=nums.slice(1,4);//returns slicednums=[2,3,4]
 var slicednums=nums.slice(); //returns a copy of the original array.
 </pre>
 
+**splice()**
+todos.splice(index,num); //deletes **num** number of elements from index **index** in an array.   
+
 ### ForEach
 JavaScript provides an easy built-in way of iterating voer an array: ForEach.
 <pre>
@@ -144,4 +147,22 @@ The arguments are in a specific order:
 - The first one represents each element in the array (per loop iteration) that .forEach was called on.
 - The second represents the index of said element.
 - The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
+</pre>
+
+
+## Object
+<pre>
+  var person = {
+    name: "Cindy",
+    age: 32,
+    city: "Missoula"
+  };
+  console.log(person.name); //Cannot use dot notation if property starts with a number/has space
+  //or
+  console.log(person["name"];
+  
+  Another differnce:
+  var str="name";
+  someObject.str //doesn't look for name
+  someObject\[str\] //does evaluate str and looks for "name"
 </pre>
