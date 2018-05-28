@@ -61,3 +61,30 @@ var li=document.querySelector("li a.special"); //All anchor tags have class spec
 var tags = document.querySelectorALl(".bolded"); //will return all the elements that matches the description 
 //(even if there's only one)
 </pre>
+
+## Manipulation
+<pre>
+//Select
+var tag = document.getElementById("highlight");
+//Manipulate
+tag.style.color="blue";
+tag.style.border = "10px solid red";
+tag.style.fontSize = "70px";
+....
+
+</pre>
+
+Rather than directly manipulating style with JavaScript, we can define a CSS class and then toggle it on or off with JS.  
+ClassList- A read-only list that contains the classes for a given element. It is **not an array**.  
+<pre>
+.some-class{
+  color: purple;
+  fontSize: 76px;
+}
+
+var tag=document.querySelector("h1");
+//adds to classList
+tag.classList.add("another-class");
+tag.classList.remove("another-class");
+tag.classList.toggle("another-class");
+</pre>
