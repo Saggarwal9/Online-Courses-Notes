@@ -62,6 +62,26 @@ var tags = document.querySelectorALl(".bolded"); //will return all the elements 
 //(even if there's only one)
 </pre>
 
+***textContent*** returns the string of all the text contained in a given element.
+``` html
+<p>
+  This is an <strong> awesome <strong>paragraph.
+</p>
+```
+<pre>
+  var tag=document.querySelector("p");
+  tag.textContent;// "This is an awesome paragraph"
+  tag.textContent="hello"; //alters the textContent
+</pre>
+
+But this will get rid of the <strong> tag.  
+**innerHtml* is another method that returns the string with the HTML tags. We can erven get the HTML of the whole body by 
+<pre>
+document.body.innerHTML
+//Also we can maintain the string format
+document.body.innerHTML="<strong> Hello </strong>"; 
+</pre>
+  
 ## Manipulation
 <pre>
 //Select
@@ -87,4 +107,12 @@ var tag=document.querySelector("h1");
 tag.classList.add("another-class");
 tag.classList.remove("another-class");
 tag.classList.toggle("another-class");
+</pre>
+
+***Manipulating Attributes***   
+We use getAttribute() and setAttribute() to read and write attributes like src or href.  
+<pre>
+var link=document.querySelector("a);
+link.getAttribute("href");
+link.setAttribute("href","www.google.com");
 </pre>
