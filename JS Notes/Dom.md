@@ -58,7 +58,7 @@ var tag=document.querySelector(".bolded"); //Always return one element (the firs
 var tag= document.querySelector("h1"); //can also take tag names/ID but returns the first one. 
 //you can also select all anchor tags under all li's
 var li=document.querySelector("li a.special"); //All anchor tags have class special.
-var tags = document.querySelectorALl(".bolded"); //will return all the elements that matches the description 
+var tags = document.querySelectorAll(".bolded"); //will return all the elements that matches the description 
 //(even if there's only one)
 </pre>
 
@@ -116,3 +116,10 @@ var link=document.querySelector("a);
 link.getAttribute("href");
 link.setAttribute("href","www.google.com");
 </pre>
+
+## Advanced DOM / DOM Events.
+<pre>
+element.addEventListener(type,functionToCall);
+</pre>
+This in the functionToCall function corresponds to the tag the event takes place on, for instance H1, LI, body etc.  
+functionTocall can be both anonymous or glboal function.  
