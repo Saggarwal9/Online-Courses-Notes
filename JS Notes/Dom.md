@@ -62,7 +62,7 @@ var tags = document.querySelectorALl(".bolded"); //will return all the elements 
 //(even if there's only one)
 </pre>
 
-***textContent*** returns the string of all the text contained in a given element.
+**textContent** returns the string of all the text contained in a given element.
 ``` html
 <p>
   This is an <strong> awesome <strong>paragraph.
@@ -74,7 +74,7 @@ var tags = document.querySelectorALl(".bolded"); //will return all the elements 
   tag.textContent="hello"; //alters the textContent
 </pre>
 
-But this will get rid of the <strong> tag.  
+But this will get rid of the strong tag.  
 **innerHtml** is another method that returns the string with the HTML tags. We can erven get the HTML of the whole body by 
 <pre>
 document.body.innerHTML
