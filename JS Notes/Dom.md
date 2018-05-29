@@ -75,7 +75,7 @@ var tags = document.querySelectorALl(".bolded"); //will return all the elements 
 </pre>
 
 But this will get rid of the <strong> tag.  
-**innerHtml* is another method that returns the string with the HTML tags. We can erven get the HTML of the whole body by 
+**innerHtml** is another method that returns the string with the HTML tags. We can erven get the HTML of the whole body by 
 <pre>
 document.body.innerHTML
 //Also we can maintain the string format
@@ -95,7 +95,7 @@ tag.style.fontSize = "70px";
 </pre>
 
 Rather than directly manipulating style with JavaScript, we can define a CSS class and then toggle it on or off with JS.  
-ClassList- A read-only list that contains the classes for a given element. It is **not an array**.  
+ClassList- A read-only list that contains the classes for a given element. It is **not an array**
 <pre>
 .some-class{
   color: purple;
@@ -109,7 +109,7 @@ tag.classList.remove("another-class");
 tag.classList.toggle("another-class");
 </pre>
 
-***Manipulating Attributes***   
+**Manipulating Attributes**   
 We use getAttribute() and setAttribute() to read and write attributes like src or href.  
 <pre>
 var link=document.querySelector("a);
