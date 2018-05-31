@@ -53,8 +53,26 @@ True False False True
 Try your Own text here Maybe a poem Or a song about fear
 </pre>
 
+Printing a list on python:
+<pre>
+fat_cat=""" #""" for a multi-lined string
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip \n\t* Grass
+"""
+print(fat_cat)
+
+#Output 
+I’ll do a list:
+  * Cat food
+  * Fishies
+  * Catnip
+  * Grass
+</pre>
+
 ### Some methods
 <pre>
 round() #Rounds the Number inside
-
+input() #Takes user input. name = input(), age=int(input()) ,age=input("What's your age") Whats your age will get printed.
 </pre>
