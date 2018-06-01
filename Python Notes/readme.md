@@ -13,12 +13,13 @@ print(3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6)
 cars= 100
 space_in_a_car=4.0
 total_passengers=500
+hairs= ['brown', 'blond' ,'red']
 x =f"there are {cars} cars"
 passengers_not_in_car=(total_passengers - (cars*space_in_a_car))
 print("There are", passengers_not_in_car, "passengers not in a car.") #There are 100.0 passengers not in a car.
 print("." * 10) #prints . 10 times.
   
-#Using string Literals
+# Using string Literals
 my_name = "Shubham Aggarwal"
 my_age = 21
 my_height = 6 #feet
@@ -105,3 +106,42 @@ txt = open(file_name) # opens the file
 print(txt.read()) #reads the string from the file
 </pre>
 
+### Methods
+<pre>
+def print_two(*args): #tells Python to take all the arguments to the function and then put them in args as a list.
+  arg1,arg2=args
+  .......
+  return arg1 + arg2
+#or
+
+def print_two(args1,args2):
+  ......
+</pre>
+
+### Boolean logic
+We use var1 and var2 to do and operation, var1 or var2 to do or operation ,not(var1) for not.  
+print(3==4 is True) #Returns true or false depending on 3==4, which should be false.  
+
+### Control flow
+<pre>
+if var1 < cats:
+  .....
+elif var2 > cats:
+  ......
+else:
+  .....
+  
+#For loop
+change= [1,"pennies",2,"dimes",3,"quarters"]
+for number in change
+  print(f"I got {number}")
+  
+elements=[]
+for i in range(0,6): //0-5
+  elements.append(i)
+  
+#While loop
+while i<6:
+  .....
+
+</pre>
