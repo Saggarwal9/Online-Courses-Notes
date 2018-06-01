@@ -145,3 +145,28 @@ while i<6:
   .....
 
 </pre>
+
+### Dictionaries
+<pre>
+#List
+things= ['a','b','c','d']
+print(things[1]) #b
+
+#Dictionaries like HashMap
+stuff = {'name':'Zed', 'age':39, 'height': 6*12 +2}
+print(stuff['name']) #Zed
+
+states={
+  'Oregon': 'OR',
+  'Flordia':'FL',
+  'California':'CL',
+  'New York': 'NY',
+  'Michigan': 'MI'
+}
+states['Michigan'] #MI
+for state,abbrev in list(states.items()):
+  print(f"{abbrev} is the abbreviation of state {state}");
+state = states.get('Texas')
+if not state:
+  print("Sorry, no Texas.")
+</pre>
