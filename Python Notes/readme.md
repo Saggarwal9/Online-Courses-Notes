@@ -71,8 +71,37 @@ I’ll do a list:
   * Grass
 </pre>
 
+### Some libraries
+<pre>
+from sys import argv #for arguments
+from os.path import exists #Returns true if a file exists, based on its name in a string as an argument. 
+</pre>
+
 ### Some methods
 <pre>
 round() #Rounds the Number inside
 input() #Takes user input. name = input(), age=int(input()) ,age=input("What's your age") Whats your age will get printed.
+len() #Gets the length of the string.
+
+#File methods
+open(file_name,flag) - returns a file object of the file opened. flag = "w"/"r"/"a"/"w+"/"r+"/"a+" #+ for reading and writing
+Fobject.close – Closes the  le. Like File->Save.. in your editor.
+Fobject.read – Reads the contents of the  le. You can assign the result to a variable. 
+Fobject.readline – Reads just one line of a text file.
+Fobject.truncate – Empties the filele. Watch out if you care about the  le.
+Fobject.write('stuff') – Writes ”stuff” to the  le.
+Fobject.seek(0) – Move the read/write location to the beginning of the  le.
 </pre>
+
+### Parameters, Unpacking, Variables, Reading Files
+1) Getting input from Argv
+<pre>
+from sys import argv
+script,first,second,third=argv
+file_name= "test.txt"
+print("The script is called:",script)
+print(f"First variable {first}, Second Variable {second}, Third Variable {third}")
+txt = open(file_name) # opens the file
+print(txt.read()) #reads the string from the file
+</pre>
+
