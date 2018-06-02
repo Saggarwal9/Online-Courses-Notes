@@ -123,3 +123,7 @@ element.addEventListener(type,functionToCall);
 </pre>
 This in the functionToCall function corresponds to the tag the event takes place on, for instance H1, LI, body etc.  
 functionTocall can be both anonymous or glboal function.  
+
+### Events
+1) Mouseover: Comes into play when you hover the mouse onto an element. It just happens only when we mouse over initially, and not continuousaly. However, if we change the color of the text during mouseover, the color will stay or any change in general.  
+2) Mouseout: Solves the problem of mouseover, where mouseout event comes into play once we stop hovering.
