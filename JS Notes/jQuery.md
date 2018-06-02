@@ -29,6 +29,7 @@ $("img") //select all img tags
 $(".sale")//select all elements with class sale
 $("#bonus")//to select elements with id bonus
 $("li a")//to select all a tangs inside li
+$("li first-of-type") //selects first li in the script
 </pre>
 
 2) Manipulating style
