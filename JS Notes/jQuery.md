@@ -48,3 +48,19 @@ $("li").css({
   background: "rgba(89, 45, 20, 0.5)"
 });
 </pre>
+
+### Methods
+<pre>
+selector.text(); //Returns all the text under the tag. We can also set the text by providing the string as the argument.
+selector.html(); //Gets the HTML content of the first element in the set of matched elements or sets the content of every matched element.
+selector.attr(); //gets the value of the attribute of the first element in the set of matched element or set one or more attributes for every matched element.
+selector.last().attr("src","www....."); //Changes for the last attribute
+selector.first()//first element under the selector.
+selector.val(); //Gets the current value of the first element in the set of matched elements or set the type of every matched element.
+//for example text in a text type input. Or make the text input empty by .val("");
+
+//Work with CSS classes with each element in the set of matched elements.
+selector.addClass()
+selector.removeClass()
+selector.toggleClass()
+</pre>
