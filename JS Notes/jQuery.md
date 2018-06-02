@@ -1,4 +1,4 @@
-###jJQuery
+### jQuery
 A JS Library that makes DOM easier.  
 
 #### Reasons to use JQuery
