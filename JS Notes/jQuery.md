@@ -51,6 +51,7 @@ $("li").css({
 
 ### Methods
 <pre>
+selector.remove() //removes the elements from html
 selector.text(); //Returns all the text under the tag. We can also set the text by providing the string as the argument.
 selector.html(); //Gets the HTML content of the first element in the set of matched elements or sets the content of every matched element.
 selector.attr(); //gets the value of the attribute of the first element in the set of matched element or set one or more attributes for every matched element.
@@ -63,4 +64,30 @@ selector.val(); //Gets the current value of the first element in the set of matc
 selector.addClass()
 selector.removeClass()
 selector.toggleClass()
+</pre>
+
+### Events
+<pre>
+selector.click(function(){
+  $(this).css("background","pink");
+});
+
+$('input[type="text"]').keypress(function(event){
+  if(event.which==13) //13 ASCII for enter
+    alert("You hit enter");
+});
+//click,dblclick,dragstart,keypress,toggle,keyup,keydown can be done with on
+$('#submit').on('click',function(){
+});
+</pre>
+
+### Effects
+<pre>
+//Arguments doesn't necessarily have to be provided.
+selector.fadeOut([duration in ms],[callback function]); //makes display none
+selector.fadeIn("","");
+selector.fadeToggle(500,function(){...}); //calls fadeOut/fadeIn depending on whether its visible or not
+selector.slideDown(); //from display none to display by sliding
+selector.slideUp(); //from visible to none
+selector.slideToggle();
 </pre>
