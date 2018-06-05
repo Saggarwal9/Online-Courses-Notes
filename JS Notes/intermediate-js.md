@@ -105,3 +105,71 @@ function Dog(name,age){
     };
 }
 </pre>
+
+#### Multiple Constructors
+<pre>
+function Car(make,model,year){
+	this.make=make;
+	....
+	....
+}
+
+function Motorcycle(make,model,year){
+	Car.call(this,make,model,year); //this relates to the Motorcycle object, else this from Car will relate to car objects.
+	//OR
+	Car.call(this,[make,model,year]); //Car.call(this,arguments);
+	this.numwheels=2;
+}
+</pre>
+
+### Prototypes
+Every constructor function has a property on it called "prototype" which is an object.  
+The prototype object has a property on it called "constructor", which points back to the constructor function.  
+Anytime an object is created using the 'new' keyword,  property called "__proto__" gets created, linking the object  
+and the prototype property of the constructor
+<pre>
+var arr= []; //[] = new Array
+var shubham=new Person("Shubham);
+Person.prototype.isInstructor=false;
+shubham.isInstructor //will return false unless explicitly set --> inheritance
+//Rather than declaring methods inside classes, we can just do
+
+Function Person(name){
+	this.....
+}
+
+//This saves space, as allocating space for function for each object would be alot,
+//Rather have the objects have access to a single function.
+Person.prototype.sayHi= function(){
+
+}
+</pre>
+
+### Closures
+We have to return the inner function for this function to work.
+<pre>
+function outer(a){
+	return function inner(b){
+		return a+b;
+	}
+}
+outer(5)(5)//10
+var storeOuter=outer(5)
+storeOuter(10) //15
+</pre>
+We can either call the inner function right away by using an extra () or we can store the result of the  
+function in a variable.  
+We do not have to name the inner function.  
+Closures are usually used to mimick private variables.
+<pre>
+function counter(){
+	var count = 0;
+	return function(){
+		return ++count;
+	}
+}
+var c= counter();
+c(); //1
+c(); //2...
+//No one can access the count variable.
+</pre>
