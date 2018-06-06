@@ -91,3 +91,8 @@ selector.slideDown(); //from display none to display by sliding
 selector.slideUp(); //from visible to none
 selector.slideToggle();
 </pre>
+
+### Event Bubbling
+It is a phenomena where when we click an element, we also click all the elements containing that element.  
+For instance, a span in a li will toggle the event on span,li,ul,body and any other tags that contains that particular span.  
+To prevent that, we can use a jQuery function called selector.click(event){ event.stopPropogation(); }
