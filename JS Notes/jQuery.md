@@ -72,6 +72,8 @@ selector.click(function(){
   $(this).css("background","pink");
 });
 
+event.currentTarget can also be used to select.  
+
 $('input[type="text"]').keypress(function(event){
   if(event.which==13) //13 ASCII for enter
     alert("You hit enter");
