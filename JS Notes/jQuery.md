@@ -26,6 +26,8 @@ A JS Library that makes DOM easier.
 1) Selecting with jQuery
 <pre>
 $("img") //select all img tags
+var $newDiv = $('<div>');  
+$newDiv.addClass('col');
 $(".sale")//select all elements with class sale
 $("#bonus")//to select elements with id bonus
 $("li a")//to select all a tangs inside li
